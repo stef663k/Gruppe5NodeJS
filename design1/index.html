@@ -15,24 +15,16 @@
                 <li><a href="#">Third category</a></li>
             </ul>
         </nav>
-        <!-- <article>
-            <h1>Post title</h1>
-            <div class="postinfo">
-                <span>datetimmmmmmmmmmmmmme</span>
-                <span>|</span>
-                <span>Author</span>
-            </div>
-            <p>1. paragraph</p>
-            <p>2. paragraph</p>
-            <p></p>
-        </article> -->
-        <% articles.forEach(function(article) { %>
-            <article>
-            <h2><%= article.title %></h2>
-            <p><%= article.date %> by <%= article.author %></p>
-            <div><%= article.content %></div>
+        <div class="articlesWrapper">
+
+            <% articles.forEach(function(article) { %>
+                <article>
+                    <h2><%= article.title %></h2>
+                    <p><%= article.date %> by <%= article.author %></p>
+                    <div><%= article.content %></div>
             </article>
             <% }); %>
+        </div>
     </section>
     <footer>
         <p>COMPANY 2023</p>

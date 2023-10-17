@@ -68,3 +68,8 @@ footer {
     color: white;
     font-weight:bold;
 }
+
+.articlesWrapper {
+    display: flex;
+    flex-direction: column;
+}

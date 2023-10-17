@@ -10,7 +10,8 @@ const server = http.createServer((req, res) => {
         case "/":
             res.writeHead(200, {'Content-Type': 'text/html'});
             let template = fs.readFileSync('design1/index.html', {encoding: "utf-8"})
-            const html = ejs.render(template, { title: 'John' });
+            const data = JSON.parse(fs.readFileSync('posts.json', 'utf8'));
+            const html = ejs.render(template, { title: 'John', articles: data });
             res.write(html);
             //res.write();
             res.end();

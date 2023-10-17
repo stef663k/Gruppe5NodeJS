@@ -4,26 +4,6 @@ const port = 3000;
 
 
 const server = http.createServer((req, res) => {
-/* fs.readFile('design1/index.html', {encoding: "utf-8"},  function(err, data) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    res.end();
-}); */
-
-    /* if(req.url === "/") {
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.write(fs.readFileSync('design1/index.html', {encoding: "utf-8"}));
-        res.end();
-    } 
-    if(req.url === "/styles/styles.css") {
-        res.writeHead(200, {'Content-Type': 'text/css'});
-        res.write(fs.readFileSync('design1/styles/styles.css', {encoding: "utf-8"}));
-        res.end();
-    }
-    
-    else{
-        res.end("Invalid Request")
-    } */
 
     switch(req.url) {
         case "/":
@@ -43,7 +23,7 @@ const server = http.createServer((req, res) => {
             break;
         default:
             res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.write('error'); //read the file & write the data content
+      res.write('error');
       res.end();
       break;
 

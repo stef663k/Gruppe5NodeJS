@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const ejs = require('ejs');
 const port = 3000;
 
 
@@ -8,7 +9,11 @@ const server = http.createServer((req, res) => {
     switch(req.url) {
         case "/":
             res.writeHead(200, {'Content-Type': 'text/html'});
-            res.write(fs.readFileSync('design1/index.html', {encoding: "utf-8"}));
+            let template = fs.readFileSync('design1/index.html', {encoding: "utf-8"})
+            const data = JSON.parse(fs.readFileSync('posts.json', 'utf8'));
+            const html = ejs.render(template, { title: 'John', articles: data });
+            res.write(html);
+            //res.write();
             res.end();
             break;
         case "/styles/styles.css":

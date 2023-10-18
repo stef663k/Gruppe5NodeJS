@@ -19,7 +19,11 @@
 
             <% articles.forEach(function(article) { %>
                 <article>
+                    <% if (article.id === 2) { %>
+                    <h2 class="greenBg"><%= article.title %></h2>
+                    <% } else { %>
                     <h2><%= article.title %></h2>
+                    <% } %>
                     <p><%= article.date %> by <%= article.author %></p>
                     <div><%= article.content %></div>
             </article>

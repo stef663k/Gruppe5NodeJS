@@ -1,17 +1,20 @@
 [
     {
+      "id": 1,
       "title": "Getting Started with Server-Side Programming in Node.js",
       "date": "October 17, 2023",
       "author": "Sarah Developer",
       "content": "In this beginner-friendly guide, Sarah Developer introduces you to the world of server-side programming in Node.js. You'll learn the basics of setting up a Node.js server, handling HTTP requests, and building simple APIs. Whether you're a seasoned developer looking to expand your skill set or a newcomer to programming, this post will get you started on the right path."
     },
     {
+      "id": 2,
       "title": "Creating RESTful APIs with Express in Node.js",
       "date": "October 20, 2023",
       "author": "John Coder",
       "content": "John Coder takes you on a deep dive into creating RESTful APIs using the Express framework in Node.js. This post covers routing, middleware, request handling, and error management. By the end of this read, you'll be well-equipped to build robust and scalable APIs for your applications."
     },
     {
+      "id": 3,
       "title": "Scaling Node.js Servers with Load Balancing",
       "date": "October 25, 2023",
       "author": "Lisa Engineer",
